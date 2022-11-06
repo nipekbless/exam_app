@@ -6,7 +6,7 @@ const AuthRoute = require("./router/AuthRoute")
 const passport = require("passport")
 const BlogRoute = require("./router/BlogRoute")
 
-const PORT = process.env.PORT_NUM || 8000
+const PORT = process.env.PORT || 8000
 
 
 app.use(express.json())
