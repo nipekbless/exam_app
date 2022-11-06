@@ -67,7 +67,7 @@ authRouter.post('/login', async (req, res, next) => {
                         //You store the id and email in the payload of the JWT. 
                         // You then sign the token with a secret or key (JWT_SECRET), and send back the token to the user.
                         // DO NOT STORE PASSWORDS IN THE JWT!
-                        const token = jwt.sign({ user: body }, process.env.JWT_SECRET);
+                        const token = jwt.sign({ user: body },process.env.JWT_SECRET,{expiresin: '1h'} );
 
                         return res.json({ token });
                     }
