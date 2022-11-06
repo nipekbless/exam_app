@@ -6,6 +6,7 @@ const AuthRoute = require("./router/AuthRoute")
 const passport = require("passport")
 const BlogRoute = require("./router/BlogRoute")
 
+const PORT = process.env.PORT_NUM || 8000
 
 
 app.use(express.json())
@@ -26,6 +27,6 @@ mongoose.connection.on("error", (err) => {
 	console.log(err);
 });
 
-app.listen( process.env.PORT_NUM, ()=>{
+app.listen( PORT, ()=>{
     console.log(`Server running successfully`)
 })
