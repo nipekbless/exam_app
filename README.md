@@ -20,13 +20,23 @@
 
  # User
 
- ## Field | ## Data_type | ## constraint
- ---------|..............|...................
-Firstname | String       | Required
-..........|..............|...................
-Lastname  | String       | Required
-..........|..............|...................
-Email     | String       | required, unique
-..........|..............|...................
-password  | Number       | required
-..........|..............|................... 
+| Field   | Data_type    | constraint       |
+|---------|--------------|------------------|
+|Firstname| String       | Required         |
+|Lastname | String       | Required         |
+|Email    | String       | required, unique |
+|password | Number       | required         |
+
+# Blog
+
+| Field        | Data_type    | constraint       |
+|--------------|--------------|------------------|
+|Title         | String       | Required, unique |
+|description   | String       | none             |
+|author        | String       | none             |
+|state         | string       | draft/ published |
+|readcount     | number       | none             |
+|reading time  | number       | none             |
+|tags          | String       | none             |
+|body          | string       | none             |
+|time stamp    | date         | none             |
